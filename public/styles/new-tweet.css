@@ -1,1 +1,46 @@
-new-tweet.css
+.tweet {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 0em 2em;
+    margin-top: 1em;
+}
+
+.tweet-icon {
+  height : 40px;
+  width : 40px;
+  float : left;
+  padding-left: 1%;
+}
+
+header.tweet-header {
+    background-color: lightgrey;
+    height: fit-content;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-top: 2%;
+}
+
+.tweet-footer p {
+  font-size: 40%;
+  border-top: 1px solid lightgrey;
+  padding: 1%;
+}
+
+ .tweet-header [name = "username"]{
+  float: right;
+  position: relative;
+  right: 1%;
+  bottom: 2%;
+  font-size: 80%;
+}
+
+.tweet-header [name = "name"] {
+  float: left;
+  margin-top: auto;
+  margin-left: 1%;
+}
+
+ .tweet-text {
+  padding: 1em 3%;
+}
