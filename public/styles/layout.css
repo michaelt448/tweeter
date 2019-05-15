@@ -29,8 +29,8 @@ main.container {
     padding-top: 140px;
     width: 450px;
     background-color: white;
-    position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 5%;
+    margin-bottom: 8%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -38,7 +38,7 @@ main.container {
 main .new-tweet {
     margin: 0em 2em;
     background-color: lightgray;
-    padding: 10px 1em;
+    padding: 4% 1em;
     border-radius: 5px;
 }
 

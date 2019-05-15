@@ -6,7 +6,7 @@ article.tweet:hover {
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 article.tweet {
@@ -15,8 +15,8 @@ article.tweet {
     border-radius: 5px;
     margin: 0em 2em;
     margin-top: 1em;
-    opacity: .5;
 }
+
 .tweet-icon {
   height : 40px;
   width : 40px;
@@ -31,6 +31,7 @@ header.tweet-header {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding-top: 2%;
+    opacity:.5;
 }
 
 .tweet-footer p {
