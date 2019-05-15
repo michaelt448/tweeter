@@ -39,7 +39,7 @@ header.tweet-header {
   padding: 1%;
 }
 
- .tweet-header [name = "username"]{
+ .tweet-header .username{
   float: right;
   position: relative;
   right: 1%;
@@ -47,7 +47,7 @@ header.tweet-header {
   font-size: 80%;
 }
 
-.tweet-header [name = "name"] {
+.tweet-header .name {
   float: left;
   margin-top: auto;
   margin-left: 1%;
