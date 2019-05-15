@@ -1,11 +1,12 @@
 $(document).ready(function(){
     const button = $("input");
-    button.click(function(e) {
+    button.on('click',function(e) {
         e.preventDefault();
+        // console.log($('textarea').text());
         if($('.counter').text() < 0) {
             alert('You have too many characters');
         }
-        else if($('.texarea').text() === "") {
+        else if($('.counter').text() == 140) {
             alert('Cannot submit empty message');
         }
         else {
