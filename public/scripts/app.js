@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
  $(document).ready(function(){
+   const button = $("input");
  const createTweetElement = (singleTweet) => {
   // const button = $("input");
   // button.click(function(e) {
@@ -45,19 +46,24 @@
 
   function renderTweets(tweets) {
     console.log(tweets);
-    for(tweet in tweets) {
-      console.log(tweet);
-      let currentArticle = createTweetElement(tweets[tweet]);
+    // for(tweet in tweets) {
+    //   console.log(tweets[tweet]);
+    //   let currentArticle = createTweetElement(tweets[tweet]);
+    //   $('#tweet-container').prepend(currentArticle);
+    // }
+    for(let i = tweets.length - 1 ; i >= 0; i--) {
+      console.log(tweets[i]);
+      let currentArticle = createTweetElement(tweets[i]);
       $('#tweet-container').append(currentArticle);
     }
   }
 
   const dataLoaded = (function loadTweets() {
-    console.log('I got to load tweets');
+    // console.log('I got to load tweets');
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url : '/tweets',
-      dataType : "JSON"
+      dataType : 'JSON'
     })
     .done(function(tweets) {
        renderTweets(tweets);

@@ -1,7 +1,9 @@
 $(document).ready(function(){
-    const button = $("input");
+    const button = $('input');
+    const textObj = $('textarea');
     button.on('click',function(e) {
-        e.preventDefault();
+       // e.preventDefault();
+        //console.dir(textObj);
         // console.log($('textarea').text());
         if($('.counter').text() < 0) {
             alert('You have too many characters');
@@ -11,15 +13,16 @@ $(document).ready(function(){
         }
         else {
             $.ajax( {
-                type : "POST",
-                url : "/tweets",
+                type : 'POST',
+                url : '/tweets',
                 data : $('textarea').serialize() 
             })
             .then(function() {
-                console.log("successfully posted");
+                console.log('successfully posted');
             })
-            $('textarea').val("");
-            $('.counter').text("140");
+            $('textarea').val('');
+            $('.counter').text('140');
+            
         }
     });
 });
