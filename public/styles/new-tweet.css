@@ -55,5 +55,6 @@ header.tweet-header {
 }
 
  .tweet-text {
+  word-wrap: break-word;
   padding: 1em 3%;
 }

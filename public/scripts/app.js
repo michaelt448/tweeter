@@ -60,7 +60,6 @@
       dataType : "JSON"
     })
     .done(function(tweets) {
-      console.log('this is fetched',tweets)
        renderTweets(tweets);
     })
   })();
@@ -111,5 +110,4 @@
 //     },
 //     "created_at": 1461113796368
 //   }
-// ];
 });
