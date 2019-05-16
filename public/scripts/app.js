@@ -39,7 +39,7 @@
  const makeFooter = (singleTweet) => {
     const newTweeterFooter = $('<footer>').toggleClass('tweet-footer');
 
-    const newTweeterFootParag = $('<p>').text(singleTweet.created_at);
+    const newTweeterFootParag = $('<p>').text(moment(singleTweet.created_at).fromNow());
 
     return newTweeterFooter.append(newTweeterFootParag);
  }

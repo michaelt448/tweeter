@@ -5,11 +5,19 @@ $(document).ready(function(){
        // e.preventDefault();
         //console.dir(textObj);
         // console.log($('textarea').text());
+        //$('.theError').remove();
+        $('.error').slideUp();
         if($('.counter').text() < 0) {
-            alert('You have too many characters');
+            $('.error').slideDown();
+            e.preventDefault();
+            // $('.theError').show();
+            $('.error').text('You are over character limit');
         }
         else if($('.counter').text() == 140) {
-            alert('Cannot submit empty message');
+            $('.error').slideDown();
+            e.preventDefault();
+            // $('.theError').show();
+            $('.error').append('Cannot submit empty message');
         }
         else {
             $.ajax( {
