@@ -25,15 +25,15 @@
         $.ajax( {
             type : 'POST',
             url : '/tweets',
-            data : $('textarea').serialize() 
+            data : textObj.serialize() 
         })
         .then(function() {
           console.log('successfully posted');
           $('#tweet-container').empty();
           dataLoaded(renderTweets);
         })
-        $('textarea').val('');
-        $('textarea').focus();
+        textObj.val('');
+        textObj.focus();
         $('.counter').text('140');
     }
  });
@@ -95,4 +95,7 @@ function renderTweets(tweets) {
 
     return footer.append(footParag);
  }
+
+ dataLoaded(renderTweets);
+
 });
