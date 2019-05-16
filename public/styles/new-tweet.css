@@ -58,3 +58,9 @@ header.tweet-header {
   word-wrap: break-word;
   padding: 1em 3%;
 }
+
+.flag-icon {
+  height: 5px;
+  width: 5px;
+  float: right;
+}
