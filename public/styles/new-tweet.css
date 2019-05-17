@@ -6,7 +6,6 @@ article.tweet:hover {
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    opacity: 1 !important;
 }
 
 article.tweet {
@@ -36,7 +35,7 @@ header.tweet-header {
 
 .tweet-footer p {
   font-size: 40%;
-  border-top: 1px solid lightgrey;
+  float: left;
   padding: 1%;
 }
 
@@ -58,9 +57,40 @@ header.tweet-header {
   word-wrap: break-word;
   padding: 1em 3%;
 }
-
 .flag-icon {
-  height: 5px;
-  width: 5px;
+  height: 10px;
+  width: 10px;
   float: right;
+  position: relative;
+  top : .4em;
+  margin-right: 3%;
+}
+.like-icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+  position: relative;
+  top : .4em;
+  margin-right: 3%;
+}
+.retweet-icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+  position: relative;
+  top : .5em;
+  margin-right: 4%;
+}
+
+footer.tweet-footer {
+  border-top: 1px solid lightgray;
+  overflow: overlay;
+}
+
+.tweet:hover .icon {
+  visibility: visible;
+}
+
+.tweet .icon {
+  visibility: hidden;
 }

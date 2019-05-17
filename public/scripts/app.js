@@ -28,7 +28,6 @@
             data : textObj.serialize() 
         })
         .then(function() {
-          console.log('successfully posted');
           $('#tweet-container').empty();
           dataLoaded(renderTweets);
         })
@@ -52,9 +51,7 @@
 };
 
 function renderTweets(tweets) {
-  console.log(tweets);
   for(let i = tweets.length - 1 ; i >= 0; i--) {
-      console.log(tweets[i]);
       let currentArticle = createTweetElement(tweets[i]);
       $('#tweet-container').append(currentArticle);
   }
@@ -77,7 +74,7 @@ function renderTweets(tweets) {
 
     // pete: the way you did this with templating is fine but a better choice might be using the .attr method
     // also object destructuring would clean up a lot of these long property acess
-    const headImg = $(`<img src = ${singleTweet.user.avatars.small}>`).addClass("tweet-icon");
+    const headImg = $(`<img src = ${singleTweet.user.avatars.small}>`).addClass('tweet-icon');
     const name = $('<h3>').addClass('name').text(singleTweet.user.name);
     const userName = $('<p>').addClass('username').text(singleTweet.user.handle);
 
@@ -92,10 +89,12 @@ function renderTweets(tweets) {
     const footer = $('<footer>').addClass('tweet-footer');
 
     const footParag = $('<p>').text(moment(singleTweet.created_at).fromNow());
+    const footFlag = $('<img src = "http://simpleicon.com/wp-content/uploads/flag.png">').addClass('flag-icon icon');
+    const footLike = $('<img src = "https://www.freeiconspng.com/uploads/youtube-like-button-png-11.png">').addClass('like-icon icon');
+    const footRetw = $('<img src = "https://image.flaticon.com/icons/png/512/127/127998.png">').addClass('retweet-icon icon');
 
-    return footer.append(footParag);
+    return footer.append(footParag,footFlag,footLike,footRetw);
  }
 
  dataLoaded(renderTweets);
-
 });
