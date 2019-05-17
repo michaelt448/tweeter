@@ -3,7 +3,7 @@
     background-color: #00a087;
     color: #e8fdff;
     padding: 0em 2em;
-    width: -webkit-fill-available;
+    width: 100vw;
     z-index: 2;
 }
 
@@ -14,18 +14,15 @@
 }
 
 #nav-bar .header{
-  float: left;
-  margin-left: 10px;
+  margin-left: 1vw;
   font-size: 2rem;
   line-height: 2.5;
 }
 
 #nav-bar .toggle {
   float: right;
-  font-size: 1rem;
   position: relative;
-  top: 12px;
-  color: #00a087;
+  top: 1vw;
   height: 50px;
   width: 12%;
 }

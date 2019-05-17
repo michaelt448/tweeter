@@ -21,6 +21,7 @@ article.tweet {
   width : 40px;
   float : left;
   padding-left: 1%;
+  padding-bottom: 1%;
 }
 
 header.tweet-header {
@@ -57,30 +58,6 @@ header.tweet-header {
   word-wrap: break-word;
   padding: 1em 3%;
 }
-.flag-icon {
-  height: 10px;
-  width: 10px;
-  float: right;
-  position: relative;
-  top : .4em;
-  margin-right: 3%;
-}
-.like-icon {
-  height: 10px;
-  width: 10px;
-  float: right;
-  position: relative;
-  top : .4em;
-  margin-right: 3%;
-}
-.retweet-icon {
-  height: 10px;
-  width: 10px;
-  float: right;
-  position: relative;
-  top : .5em;
-  margin-right: 4%;
-}
 
 footer.tweet-footer {
   border-top: 1px solid lightgray;
@@ -88,9 +65,21 @@ footer.tweet-footer {
 }
 
 .tweet:hover .icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+  position: relative;
+  top : .5em;
+  margin-right: 4%;
   visibility: visible;
 }
 
 .tweet .icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+  position: relative;
+  top : .5em;
+  margin-right: 4%;
   visibility: hidden;
 }
