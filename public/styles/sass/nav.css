@@ -1,0 +1,27 @@
+#nav-bar {
+  position: fixed;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding: 0em 2em;
+  width: 100vw;
+  z-index: 2;
+}
+#nav-bar .logo {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+#nav-bar .header {
+  margin-left: 1vw;
+  font-size: 2rem;
+  line-height: 2.5;
+}
+#nav-bar .toggle {
+  float: right;
+  position: relative;
+  top: 1vw;
+  height: 50px;
+  width: 12%;
+}
+
+/*# sourceMappingURL=nav.css.map */

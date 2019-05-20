@@ -19,11 +19,49 @@
   line-height: 2.5;
 }
 
-#nav-bar .toggle {
+#nav-bar button.clicked:focus {
+  background-color: red;
+  color: white;
   float: right;
   position: relative;
   top: 1vw;
   height: 50px;
   width: 12%;
+}
+
+
+#nav-bar button {
+  background-color: lightsalmon;
+  opacity: .8;
+  color: black;
+  float: right;
+  position: relative;
+  top: 1vw;
+  height: 50px;
+  width: 12%;
+}
+
+#nav-bar button.clicked {
+  background-color: red;
+  color: black;
+  float: right;
+  position: relative;
+  top: 1vw;
+  height: 50px;
+  width: 12%;
+}
+#nav-bar button img {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1vw;
+  margin-top: 7%;
+  
+}
+
+#nav-bar button p {
+  position: relative;
+  float: right;
+  right: 15%;
+  line-height: 63%;
 }
 

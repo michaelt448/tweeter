@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+    font-family: Roboto Condensed, sans-serif;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /*
+   * Global layout stuff
+   */
+  
+  body {
+    margin: 0;
+    color: #244751;
+    background-color: #eee;
+  }
+  
+  /*
+   * Additional CSS can be defined below or in other CSS files, as per instructions
+   */
+  
+main.container {
+
+    padding-top: 140px;
+    width: 450px;
+    background-color: white;
+    padding-bottom: 5%;
+    margin-bottom: 8%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+   .new-tweet {
+        margin: 0em 2em;
+        background-color: lightgray;
+        padding: 4% 1em;
+        border-radius: 5px;
+        display: none;
+  }
+  
+   .new-tweet h2 {
+        border-bottom: 1px solid black;
+        margin-top: 5px;
+  }
+  
+  
+    .error {
+        background-color: pink;
+        color: red;
+        padding: 1% 8%;
+        margin: 0% 7% 2% 7%;
+        text-align: center;
+        border-radius: 10px;
+  }
+}
+
+form {
+    .counter {
+        float: right;
+        line-height: 1.5;
+        font-style: italic;
+    }
+
+    textarea {
+        width: 100%;
+    }
+  }

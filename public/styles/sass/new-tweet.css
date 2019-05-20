@@ -1,0 +1,73 @@
+article.tweet:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+header.tweet-header {
+  background-color: lightgrey;
+  height: fit-content;
+  overflow: hidden;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-top: 2%;
+  opacity: 0.5;
+}
+header.tweet-header .tweet-icon {
+  height: 40px;
+  width: 40px;
+  float: left;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+header.tweet-header .username {
+  float: right;
+  position: relative;
+  right: 1%;
+  bottom: 2%;
+  font-size: 80%;
+}
+header.tweet-header .name {
+  float: left;
+  margin-top: auto;
+  margin-left: 1%;
+}
+
+.tweet-text {
+  word-wrap: break-word;
+  padding: 1em 3%;
+}
+
+footer.tweet-footer {
+  border-top: 1px solid lightgray;
+  overflow: overlay;
+}
+footer.tweet-footer p {
+  font-size: 40%;
+  float: left;
+  padding: 1%;
+}
+footer.tweet-footer .tweet:hover .icon {
+  visibility: visible;
+}
+footer.tweet-footer .tweet .icon {
+  visibility: hidden;
+}
+
+article.tweet:hover, article.tweet {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin: 0em 2em;
+  margin-top: 1em;
+}
+
+footer.tweet-footer .tweet:hover .icon, footer.tweet-footer .tweet .icon {
+  height: 10px;
+  width: 10px;
+  float: right;
+  position: relative;
+  top: 0.5em;
+  margin-right: 4%;
+}
+
+/*# sourceMappingURL=new-tweet.css.map */

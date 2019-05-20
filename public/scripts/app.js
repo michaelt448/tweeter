@@ -10,50 +10,16 @@ $(document).ready(function(){
 
   //Main function, when button is clicked start here
 
-  button.on('click',function(e) {
-    e.preventDefault();
-    const inputText = textObj.val().trim();
-    $('.error').empty();
-    if(Number($('.counter').text()) < 0) {
-      $('.error').slideDown();
-      $('.error').text('You are over character limit');
-    }
-    else if(inputText === '') {
-      $('.error').slideDown();
-      $('.error').append('Cannot submit empty message');
-    }
-    else {
-      $('.error').slideUp();
-      $.ajax( {
-        type : 'POST',
-        url : '/tweets',
-        data : textObj.serialize() 
-      })
-      .then(function() {
-        $('#tweet-container').empty();
-        dataLoaded(renderTweets);
-      });
-      textObj.val('');
-      textObj.focus();
-      $('.counter').text('140');
-    }
- });
-
-  const dataLoaded = (callback) => {
-    $.ajax({
-      type: 'GET',
-      url : '/tweets',
-      dataType : 'JSON'
-    })
-    .done(function(tweets) {
+  const loadData = (callback) => {
+    $.get('/tweets',null,(tweets) => {
       callback(tweets);
     });
   };
 
   const renderTweets = (tweets) => {
-    for(let i = tweets.length - 1 ; i >= 0; i--) {
-        let currentArticle = createTweetElement(tweets[i]);
-        $('#tweet-container').append(currentArticle);
+    const revTweets = tweets.reverse();
+    for(tweet of revTweets) {
+        $('#tweet-container').append(createTweetElement(tweet));
     };
   };
 
@@ -87,11 +53,37 @@ $(document).ready(function(){
     const footParag = $('<p>').text(moment(singleTweet.created_at).fromNow());
     const footFlag = $('<img src = "http://simpleicon.com/wp-content/uploads/flag.png">').addClass('icon');
     const footLike = $('<img src = "https://www.freeiconspng.com/uploads/youtube-like-button-png-11.png">').addClass('icon');
+    // const footLikeButton = $('<button>').addClass('likeButton').attr('data-likes','0').append(footLike);
     const footRetw = $('<img src = "https://image.flaticon.com/icons/png/512/127/127998.png">').addClass('icon');
 
     return footer.append(footParag,footFlag,footLike,footRetw);
  };
 
-  // This function is called upon website being loaded
- dataLoaded(renderTweets);
+  // This function is called upon website loaded first time or refreshed
+ loadData(renderTweets);
+
+ // This is function is called upon posting tweet
+ button.on('click',function(e) {
+  e.preventDefault();
+  const inputText = textObj.val().trim();
+  $('.error').empty();
+  if(Number($('.counter').text()) < 0) {
+    $('.error').slideDown();
+    $('.error').text('You are over character limit');
+  }
+  else if(inputText === '') {
+    $('.error').slideDown();
+    $('.error').append('Cannot submit empty message');
+  }
+  else {
+    $('.error').slideUp();
+    $.post( '/tweets',textObj.serialize(), () => {
+      $('#tweet-container').empty();
+      loadData(renderTweets);
+    });
+    textObj.val('');
+    textObj.focus();
+    $('.counter').text('140');
+  }
+});
 });
